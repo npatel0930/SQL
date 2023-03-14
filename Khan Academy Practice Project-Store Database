@@ -1,0 +1,27 @@
+--Create store database
+
+
+create table "store" (id integer, name text, price integer, aisle integer, quantity integer);
+insert into store values (1, "book", 10, 1, 10);
+insert into store values (2, "TOY", 20, 1, 20);
+insert into store values (3, "game", 30, 3, 30);
+insert into store values (4, "mask", 40, 4, 40);
+insert into store values (5, "phone", 50, 5, 50);
+insert into store values (6, "case", 60, 1, 60);
+insert into store values (7, 'pillow', 70, 7, 70);
+insert into store values (8, 'blanket', 80, 4, 80);
+insert into store values (9, 'plush', 90, 9, 90);
+insert into store values (10, 'coat', 100, 10, 100);
+insert into store values (11, 'glasses', 110, 2, 110);
+insert into store values (12, 'gloves', 120, 12, 120);
+insert into store values (13, 'socks', 130, 5, 130);
+insert into store values (14, 'shoes', 140, 4, 140);
+insert into store values (15, 'pants', 150, 7, 150);
+
+--organize by price
+
+select * from store order by price asc;
+
+--what is the average price in the store?
+
+select AVG(price) from store;
