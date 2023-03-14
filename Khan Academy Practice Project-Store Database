@@ -25,3 +25,8 @@ select * from store order by price asc;
 --what is the average price in the store?
 
 select AVG(price) from store;
+
+--what is the average price on aisle 7?
+
+select AVG(price) from store where aisle=7;
+
