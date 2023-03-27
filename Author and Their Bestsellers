@@ -1,0 +1,28 @@
+/* Create table about the people and what they do here */
+
+Create Table authors (id INTEGER PRIMARY KEY AUTOINCREMENT, full_name TEXT, genre TEXT, average_wrdcount INTEGER);
+Insert into authors (full_name, genre, average_wrdcount) VALUES ('Colleen Hoover', 'Romance', 100000);
+Insert into authors (full_name, genre, average_wrdcount) VALUES ('Sarah J Maas', 'Fantasy', 150000);
+Insert into authors (full_name, genre, average_wrdcount) VALUES ('Leigh Bardugo', 'Fantasy', 100000);
+SELECT * FROM authors;
+Insert into authors (full_name, genre, average_wrdcount) VALUES ('Jewel E Ann', 'Romance', 130000);
+Insert into authors (full_name, genre, average_wrdcount) VALUES ('Laini Taylor', 'Fantasy', 125000);
+Insert into authors (full_name, genre, average_wrdcount) VALUES ('Jay Kristoff', 'Fantasy', 300000);
+Insert into authors (full_name, genre, average_wrdcount) VALUES ('Jennifer L Armentrout', 'Fantasy', 250000);
+
+Create table bestsellers (id integer primary key autoincrement, title text, copies_sold integer, author_id integer);
+Insert into bestsellers (title, copies_sold, author_id) values ('It Ends With Us', 4000000, 1);
+Insert into bestsellers (title, copies_sold, author_id) values ('A Court of Mist and Fury', 18000000, 2);
+Insert into bestsellers (title, copies_sold, author_id) values ('Nevernight', 2000000, 6);
+Insert into bestsellers (title, copies_sold, author_id) values ('Six of Crows', 2000000, 3);
+Insert into bestsellers (title, copies_sold, author_id) values ('Shadow and Bone', 5000000, 3);
+Insert into bestsellers (title, copies_sold, author_id) values ('House of Sky and Breath', 18000000, 2);
+Insert into bestsellers (title, copies_sold, author_id) values ('From Blood and Ash', 25000000, 7);
+Insert into bestsellers (title, copies_sold, author_id) values('Covenant', 1000000, 7);
+
+/*Match authors with their works*/
+
+select a.full_name, b.title
+from authors as a
+join bestsellers as b
+on a.id=b.author_id;
